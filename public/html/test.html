@@ -3,13 +3,13 @@
 
 <head>
     <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-
 </head>
 
 <body>
     <script>
         $.get("/stories/latest",function(data){
             console.log(data);
+            $("body").append(JSON.stringify(data));
         })
     </script>
 </body>
