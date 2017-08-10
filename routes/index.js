@@ -27,7 +27,7 @@ router.get("/news/before/:date", function (req, res, next) {
   });
 });
 
-router.get("/news/before/:id", function (req, res, next) {
+router.get("/news/:id", function (req, res, next) {
   request('http://news-at.zhihu.com/api/3/news/'+req.params.id, function (error, response, body) {
     res.json(JSON.parse(body));
   });
